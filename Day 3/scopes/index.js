@@ -42,6 +42,9 @@ anotherFunction();
 
 // function hoisting
 
+// console.log(sayMyName("Naoise"));
+// console.log(sayMyName2("Naoise"));
+
 debugger;
 function sayMyName(name) {
   console.log("My name is " + name);
