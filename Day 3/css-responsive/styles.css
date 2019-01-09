@@ -1,0 +1,78 @@
+
+/* ---- reset ---- */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ---- typography ---- */
+
+body {
+  color: #111;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 147%;
+}
+
+h1 {}
+
+h2 {}
+
+h3 {}
+
+p {
+  margin: 0;
+}
+
+/* my styles for responsive */
+
+/* default size mobile  */
+.container {
+    /* no width defined */
+    margin: 0 auto;
+}
+
+.logo {
+    display: none;
+    float: left;
+    margin-right: 1rem;
+}
+
+/* ipad */
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+    .logo {
+        display: block;
+    }
+}
+
+/* desktop */
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
