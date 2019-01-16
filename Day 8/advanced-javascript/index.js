@@ -38,11 +38,13 @@ class Chronometer {
         this.seconds = 0;
     }
     startTimer() {
-        var self = this;
+        // var self;
         setTimeout(function() {
             debugger; // what is `this`?
+
+            // self.seconds++;
             this.seconds++;
-        }.bind(this, 1000);
+        }.bind(this), 1000);
     }
 }
 
