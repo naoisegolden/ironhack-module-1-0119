@@ -5,7 +5,6 @@ function startGame() {
     var canvas = document.getElementById('canvas');
     var gameEnded = function () {
         game.stop();
-        showGameScreen();
     }
     var onKeyDown = function (event) {
         switch (event.keyCode) {
