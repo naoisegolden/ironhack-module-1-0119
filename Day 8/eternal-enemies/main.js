@@ -1,15 +1,22 @@
 'use strict';
 
 function startGame() {
-    // Initialize instances, variables and auxiliary functions
+    // Variables and auxiliary functions
     var canvas = document.getElementById('canvas');
-    var game = new Game(canvas);
+    var gameEnded = function () {
+        game.stop();
+        showGameScreen();
+    }
     var onKeyDown = function (event) {
         switch (event.keyCode) {
             case 38: game.keyUp(); break;
             case 40: game.keyDown(); break;
         }
     }
+
+
+    // Instance of game
+    var game = new Game(canvas, gameEnded);
 
     // Add event listeners
     document.addEventListener('keyup', onKeyDown);

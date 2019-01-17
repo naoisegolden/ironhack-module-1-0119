@@ -1,10 +1,11 @@
 'use strict';
 
-function Game(canvas) {
+function Game(canvas, gameEndedHandler) {
     this.ctx = canvas.getContext('2d');
     this.player = new Player(canvas);
     this.enemies = [];
     this.animation;
+    this.gameEndedHandler = gameEndedHandler;
 
     this._clearCanvas = function() {
         this.ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -61,8 +62,9 @@ Game.prototype.start = function() {
 
         // Check for game over
         if (this.player.isDead()) {
-            this.stop();
-            console.log('Game Over!')
+            // this.stop();
+            this.gameEndedHandler();
+            console.log('Game Over!');
         }
     }
 
